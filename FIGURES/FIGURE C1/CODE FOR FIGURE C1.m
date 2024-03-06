@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MATLAB CODE FOR FIGURE C1 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+load('Spellman_FOUR_MATS.MAT');
+load('Proteomics_FOUR_MATS.MAT');
+load('EPSI_FOUR_MATS.MAT');
+
+
+[PD_DIAG_VEC, PD_DIAG_LABELS, PD_OFFDIAG_VEC, PD_OFFDIAG_LABELS] = DIAG_OFFDIAG_SPLIT(PD_107, p_PD);
+
+[EPSI_DIAG_VEC, EPSI_DIAG_LABELS, EPSI_OFFDIAG_VEC, EPSI_OFFDIAG_LABELS] = DIAG_OFFDIAG_SPLIT(EPSI_227, p_EPSI);
+
+[SPELL_DIAG_VEC, SPELL_DIAG_LABELS, SPELL_OFFDIAG_VEC, SPELL_OFFDIAG_LABELS] = DIAG_OFFDIAG_SPLIT(Spell_ALL, p_Spell);
+
+figure
+subplot(2,1,1)
+boxplot(PD_DIAG_VEC, PD_DIAG_LABELS)
+subplot(2,1,2)
+boxplot(PD_OFFDIAG_VEC, PD_OFFDIAG_LABELS)
+
+figure
+subplot(2,1,1)
+boxplot(EPSI_DIAG_VEC, EPSI_DIAG_LABELS)
+subplot(2,1,2)
+boxplot(EPSI_OFFDIAG_VEC, EPSI_OFFDIAG_LABELS)
+
+figure
+subplot(2,1,1)
+boxplot(SPELL_DIAG_VEC, SPELL_DIAG_LABELS)
+subplot(2,1,2)
+boxplot(SPELL_OFFDIAG_VEC, SPELL_OFFDIAG_LABELS)
+
+
+load('Supp_C3_Boxplots_error_sigma_01.MAT');
+load('Supp_C3_Boxplots_error_sigma_05.MAT');
+load('Supp_C3_Boxplots_error_sigma_08.MAT');
+
+[S01_DIAG_VEC, S01_DIAG_LABELS, S01_OFFDIAG_VEC, S01_OFFDIAG_LABELS] = DIAG_OFFDIAG_SPLIT(S_01, p_vec);
+[S05_DIAG_VEC, S05_DIAG_LABELS, S05_OFFDIAG_VEC, S05_OFFDIAG_LABELS] = DIAG_OFFDIAG_SPLIT(S_05, p_vec);
+[S08_DIAG_VEC, S08_DIAG_LABELS, S08_OFFDIAG_VEC, S08_OFFDIAG_LABELS] = DIAG_OFFDIAG_SPLIT(S_08, p_vec);
+
+figure
+subplot(2,1,1)
+boxplot(S01_DIAG_VEC, S01_DIAG_LABELS)
+subplot(2,1,2)
+boxplot(S01_OFFDIAG_VEC, S01_OFFDIAG_LABELS)
+
+figure
+subplot(2,1,1)
+boxplot(S05_DIAG_VEC, S05_DIAG_LABELS)
+subplot(2,1,2)
+boxplot(S05_OFFDIAG_VEC, S05_OFFDIAG_LABELS)
+
+figure
+subplot(2,1,1)
+boxplot(S08_DIAG_VEC, S08_DIAG_LABELS)
+subplot(2,1,2)
+boxplot(S08_OFFDIAG_VEC, S08_OFFDIAG_LABELS)
