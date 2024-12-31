@@ -5,4 +5,4 @@
 1. SECTION NUMERICAL STUDIES: R code and results for Section 3 Numerical Studies
 2. SECTION DATA EXAMPLES: real datasets, R code, and results for Section 4 Data Examples
 3. SECTION SUPPLEMENTARY MATERIAL: R code and results for Supplementary Material Section C Additional Simulation Studies
-4. FIGURES: R code for creating figures in the main paper and supplementary Material 
+4. FIGURES: R code for creating figures in the main paper and Supplementary Material 
